@@ -10,6 +10,16 @@
     --success-green: #25d366;
 }
 
+/* Dark Mode Variables */
+:root[data-theme="dark"] {
+    --primary-black: #121212;
+    --text-color: #e0e0e0;
+    --light-text: #b0b0b0;
+    --white: #1e1e1e;
+    --light-gray: #2a2a2a;
+    --charcoal: #1f1f1f;
+}
+
 /* Global Styles */
 * {
     margin: 0;
@@ -26,6 +36,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--white);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -119,6 +130,58 @@ img {
 .book-btn:hover {
     background-color: #c99f2a !important;
     transform: scale(1.05);
+}
+
+/* Language & Theme Switcher */
+.lang-theme-switcher {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.lang-switcher {
+    display: flex;
+    background-color: rgba(212, 175, 55, 0.1);
+    border: 1px solid var(--primary-gold);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.lang-btn {
+    padding: 8px 12px;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.lang-btn.active {
+    background-color: var(--primary-gold);
+    color: var(--primary-black);
+}
+
+.lang-btn:hover {
+    background-color: rgba(212, 175, 55, 0.2);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--primary-gold);
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    background-color: rgba(212, 175, 55, 0.1);
 }
 
 .hamburger {
@@ -259,6 +322,11 @@ img {
 section {
     padding: 100px 0;
     border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] section {
+    border-bottom-color: #333;
 }
 
 section h2 {
@@ -285,6 +353,10 @@ section h2::after {
     background-color: #fafafa;
 }
 
+[data-theme="dark"] #services {
+    background-color: #222;
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -301,6 +373,11 @@ section h2::after {
     transition: all 0.3s ease;
     border-top: 3px solid var(--primary-gold);
     animation: fadeInUp 0.6s ease-out;
+}
+
+[data-theme="dark"] .service-card {
+    background-color: #2a2a2a;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 .service-card:hover {
@@ -332,6 +409,21 @@ section h2::after {
     font-size: 1.8rem;
     color: var(--primary-gold);
     font-weight: 700;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #b0b0b0;
+    margin-right: 8px;
+    font-size: 1rem;
+}
+.discount-label {
+    color: var(--primary-gold);
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: rgba(212, 175, 55, 0.12);
+    padding: 2px 10px;
+    border-radius: 5px;
 }
 
 /* About Section */
@@ -411,6 +503,10 @@ section h2::after {
     background-color: #fafafa;
 }
 
+[data-theme="dark"] #reviews {
+    background-color: #222;
+}
+
 .reviews-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -425,6 +521,11 @@ section h2::after {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     border-left: 4px solid var(--primary-gold);
+}
+
+[data-theme="dark"] .review-card {
+    background-color: #2a2a2a;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 .review-card:hover {
@@ -536,6 +637,10 @@ section h2::after {
     background-color: #fafafa;
 }
 
+[data-theme="dark"] #contact {
+    background-color: #222;
+}
+
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -585,6 +690,11 @@ section h2::after {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
+[data-theme="dark"] .booking-form {
+    background-color: #2a2a2a;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
 .booking-form h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
@@ -613,6 +723,16 @@ section h2::after {
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
     transition: border-color 0.3s ease;
+    background-color: var(--white);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select,
+[data-theme="dark"] .form-group textarea {
+    background-color: #3a3a3a;
+    border-color: #555;
+    color: #e0e0e0;
 }
 
 .form-group input:focus,
@@ -1014,3 +1134,68 @@ footer {
         max-width: 100%;
     }
 }
+
+/* Additional Dark Mode Styles */
+[data-theme='dark'] #about {
+    background-color: #1a1a1a;
+}
+
+[data-theme='dark'] .about-image {
+    background: linear-gradient(135deg, #1f1f1f 0%, #121212 100%);
+}
+
+[data-theme='dark'] #gallery {
+    background-color: #1a1a1a;
+}
+
+[data-theme='dark'] footer {
+    background-color: #0f0f0f;
+}
+
+[data-theme='dark'] .service-card h3,
+[data-theme='dark'] .booking-form h3,
+[data-theme='dark'] .about-text h2 {
+    color: #e0e0e0;
+}
+
+[data-theme='dark'] .review-header h4,
+[data-theme='dark'] .info-item h4,
+[data-theme='dark'] .footer-section h3 {
+    color: #e0e0e0;
+}
+
+[data-theme='dark'] footer p,
+[data-theme='dark'] .footer-section p,
+[data-theme='dark'] .footer-section ul a,
+[data-theme='dark'] .footer-contact p {
+    color: #b0b0b0;
+}
+
+[data-theme='dark'] .hero {
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.9) 0%, rgba(31, 31, 31, 0.9) 100%), 
+                url('https://images.unsplash.com/photo-1622287252930-2d0f03f4c0eb?w=1200') center/cover no-repeat;
+}
+
+/* Media Query Adjustments for Dark Mode */
+@media (max-width: 768px) {
+    .lang-theme-switcher {
+        margin-left: 0;
+        gap: 10px;
+    }
+
+    .lang-switcher {
+        display: none;
+    }
+
+    .theme-toggle {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 576px) {
+    .lang-theme-switcher {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

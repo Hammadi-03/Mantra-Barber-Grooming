@@ -1,16 +1,135 @@
+// Language Management
+const LANGUAGES = {
+    en: 'en',
+    id: 'id'
+};
+
+let currentLanguage = localStorage.getItem('language') || 'en';
+let currentTheme = localStorage.getItem('theme') || 'light';
+
+// Initialize language and theme on page load
+document.addEventListener('DOMContentLoaded', () => {
+    initializeLanguage();
+    initializeTheme();
+    setCurrentYear();
+});
+
+// Initialize Language
+function initializeLanguage() {
+    setLanguage(currentLanguage);
+}
+
+// Set Language
+function setLanguage(lang) {
+    if (lang !== 'en' && lang !== 'id') return;
+    
+    currentLanguage = lang;
+    localStorage.setItem('language', lang);
+    
+    // Update all elements with data attributes
+    document.querySelectorAll('[data-en][data-id]').forEach(el => {
+        const text = el.getAttribute(`data-${lang}`);
+        if (text) {
+            el.textContent = text;
+        }
+    });
+    
+    // Update input placeholders
+    document.querySelectorAll('[data-en-placeholder][data-id-placeholder]').forEach(el => {
+        const placeholder = el.getAttribute(`data-${lang}-placeholder`);
+        if (placeholder) {
+            el.placeholder = placeholder;
+        }
+    });
+    
+    // Update select options
+    document.querySelectorAll('option[data-en][data-id]').forEach(el => {
+        const text = el.getAttribute(`data-${lang}`);
+        if (text) {
+            el.textContent = text;
+        }
+    });
+    
+    // Update active language button
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('active');
+        }
+    });
+    
+    // Update page title
+    const titleEl = document.querySelector('title');
+    if (titleEl) {
+        const titleText = titleEl.getAttribute(`data-${lang}`);
+        if (titleText) {
+            titleEl.textContent = titleText;
+        }
+    }
+}
+
+// Language switcher event listeners
+document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        setLanguage(lang);
+    });
+});
+
+// Theme Management
+function initializeTheme() {
+    if (currentTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        updateThemeIcon('sun');
+    } else {
+        document.documentElement.removeAttribute('data-theme');
+        updateThemeIcon('moon');
+    }
+}
+
+function toggleTheme() {
+    if (currentTheme === 'light') {
+        currentTheme = 'dark';
+        document.documentElement.setAttribute('data-theme', 'dark');
+        updateThemeIcon('sun');
+    } else {
+        currentTheme = 'light';
+        document.documentElement.removeAttribute('data-theme');
+        updateThemeIcon('moon');
+    }
+    localStorage.setItem('theme', currentTheme);
+}
+
+function updateThemeIcon(icon) {
+    const themeToggle = document.querySelector('.theme-toggle');
+    if (themeToggle) {
+        themeToggle.innerHTML = `<i class="fas fa-${icon}"></i>`;
+    }
+}
+
+// Theme toggle button event listener
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.querySelector('.theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+});
+
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-menu a').forEach(n => n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
+    if (hamburger) hamburger.classList.remove('active');
+    if (navMenu) navMenu.classList.remove('active');
 }));
 
 // Smooth scroll for anchor links
@@ -40,9 +159,12 @@ if(appointmentForm) {
         const formData = new FormData(this);
         const data = Object.fromEntries(formData);
         
-        // In a real application, you would send this data to a server
-        // For demo purposes, we'll just show an alert
-        alert('Appointment request submitted! We will contact you shortly to confirm.');
+        // Show localized alert
+        const alertMessage = currentLanguage === 'en' 
+            ? 'Appointment request submitted! We will contact you shortly to confirm.'
+            : 'Permintaan janji temu telah dikirim! Kami akan menghubungi Anda segera untuk konfirmasi.';
+        
+        alert(alertMessage);
         this.reset();
         
         // You could add AJAX submission here:
@@ -107,7 +229,7 @@ document.querySelectorAll('.gallery-item').forEach(item => {
         img.style.cssText = `
             max-width: 90%;
             max-height: 90%;
-            border: 3px solid var(--gold);
+            border: 3px solid var(--primary-gold);
             border-radius: 8px;
         `;
         
@@ -130,12 +252,12 @@ document.querySelectorAll('.gallery-item').forEach(item => {
 });
 
 // Current year in footer
-document.addEventListener('DOMContentLoaded', () => {
+function setCurrentYear() {
     const yearSpan = document.querySelector('.current-year');
     if(yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
-});
+}
 
 // Animation on scroll
 const observerOptions = {

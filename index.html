@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mantra Barber & Grooming | Premium Barbershop</title>
+    <title data-en="Mantra Barber & Grooming | Premium Barbershop" data-id="Mantra Barber & Grooming | Toko Cukur Premium">Mantra Barber & Grooming | Premium Barbershop</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank">
+    <a href="https://api.whatsapp.com/send/?phone=%2B6285117772059&text&type=phone_number&app_absent=0" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -23,14 +23,23 @@
                     <h1>MANTRA<span>BARBER</span></h1>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#booking" class="book-btn">Book Now</a></li>
+                    <li><a href="#home" class="active" data-en="Home" data-id="Beranda">Home</a></li>
+                    <li><a href="#services" data-en="Services" data-id="Layanan">Services</a></li>
+                    <li><a href="#about" data-en="About" data-id="Tentang">About</a></li>
+                    <li><a href="#reviews" data-en="Reviews" data-id="Ulasan">Reviews</a></li>
+                    <li><a href="#gallery" data-en="Gallery" data-id="Galeri">Gallery</a></li>
+                    <li><a href="#contact" data-en="Contact" data-id="Kontak">Contact</a></li>
+                    <li><a href="#booking" class="book-btn" data-en="Book Now" data-id="Pesan Sekarang">Book Now</a></li>
                 </ul>
+                <div class="lang-theme-switcher">
+                    <div class="lang-switcher">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="id">ID</button>
+                    </div>
+                    <button class="theme-toggle" title="Toggle Dark Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -45,12 +54,12 @@
         <div class="hero-overlay">
             <div class="container">
                 <div class="hero-content">
-                    <h2 class="hero-tagline">Crafted Cuts. Sharp Style.</h2>
-                    <h1 class="hero-title">Your Signature Look Starts Here.</h1>
-                    <p class="hero-subtitle">Precision grooming tailored to your style. Where modern techniques meet classic barbershop tradition.</p>
+                    <h2 class="hero-tagline" data-en="Crafted Cuts. Sharp Style." data-id="Potongan Kelas. Gaya Tajam.">Crafted Cuts. Sharp Style.</h2>
+                    <h1 class="hero-title" data-en="Your Signature Look Starts Here." data-id="Penampilan Khas Anda Dimulai Di Sini.">Your Signature Look Starts Here.</h1>
+                    <p class="hero-subtitle" data-en="Precision grooming tailored to your style. Where modern techniques meet classic barbershop tradition." data-id="Perawatan presisi yang disesuaikan dengan gaya Anda. Di mana teknik modern bertemu tradisi toko cukur klasik.">Precision grooming tailored to your style. Where modern techniques meet classic barbershop tradition.</p>
                     <div class="hero-buttons">
-                        <a href="#booking" class="btn-primary">Book Now</a>
-                        <a href="#services" class="btn-secondary">View Services</a>
+                        <a href="#booking" class="btn-primary" data-en="Book Now" data-id="Pesan Sekarang">Book Now</a>
+                        <a href="#services" class="btn-secondary" data-en="View Services" data-id="Lihat Layanan">View Services</a>
                     </div>
                     <div class="hero-rating">
                         <div class="stars">
@@ -60,7 +69,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <span>⭐ <strong>5.0</strong> Google Rating • 300+ Reviews</span>
+                        <span>⭐ <strong>5.0</strong> <span data-en="Google Rating • " data-id="Rating Google • ">Google Rating • </span><span data-en="300+ Reviews" data-id="300+ Ulasan">300+ Reviews</span></span>
                     </div>
                 </div>
             </div>
@@ -71,85 +80,85 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our <span>Services</span></h2>
-                <p class="section-subtitle">Premium grooming services with precision and care</p>
+                <h2 class="section-title"><span data-en="Our " data-id="Layanan ">Our </span><span data-en="Services" data-id="Kami">Services</span></h2>
+                <p class="section-subtitle" data-en="Premium grooming services with precision and care" data-id="Layanan perawatan premium dengan presisi dan perhatian">Premium grooming services with precision and care</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-cut"></i>
                     </div>
-                    <h3>Custom Haircut</h3>
-                    <p>Personalized haircut tailored to your facial structure and style preferences.</p>
+                    <h3 data-en="Custom Haircut" data-id="Potong Rambut Khusus">Custom Haircut</h3>
+                    <p data-en="Personalized haircut tailored to your facial structure and style preferences." data-id="Potongan rambut personal yang disesuaikan dengan struktur wajah dan preferensi gaya Anda.">Personalized haircut tailored to your facial structure and style preferences.</p>
                     <div class="service-details">
-                        <p><i class="far fa-clock"></i> 45-60 min</p>
-                        <p class="price">IDR 85,000</p>
+                        <p><i class="far fa-clock"></i> <span data-en="45-60 min" data-id="45-60 mnt">45-60 min</span></p>
+                        <p class="price"><span class="old-price">IDR 85,000</span> <span class="discount-label">IDR 65,000</span></p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-sliders-h"></i>
                     </div>
-                    <h3>Fade Cut</h3>
-                    <p>Expert fade techniques for a sharp, clean transition from skin to hair.</p>
+                    <h3 data-en="Fade Cut" data-id="Potongan Fade">Fade Cut</h3>
+                    <p data-en="Expert fade techniques for a sharp, clean transition from skin to hair." data-id="Teknik fade ahli untuk transisi tajam dan bersih dari kulit ke rambut.">Expert fade techniques for a sharp, clean transition from skin to hair.</p>
                     <div class="service-details">
-                        <p><i class="far fa-clock"></i> 60-75 min</p>
-                        <p class="price">IDR 100,000</p>
+                        <p><i class="far fa-clock"></i> <span data-en="60-75 min" data-id="60-75 mnt">60-75 min</span></p>
+                        <p class="price"><span class="old-price">IDR 100,000</span> <span class="discount-label">IDR 80,000</span></p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-gem"></i>
                     </div>
-                    <h3>Straight Razor Shave</h3>
-                    <p>Traditional hot towel and straight razor shave for the ultimate smooth finish.</p>
+                    <h3 data-en="Straight Razor Shave" data-id="Cukur Pisau Lurus">Straight Razor Shave</h3>
+                    <p data-en="Traditional hot towel and straight razor shave for the ultimate smooth finish." data-id="Cukur pisau lurus dan handuk panas tradisional untuk hasil mulus sempurna.">Traditional hot towel and straight razor shave for the ultimate smooth finish.</p>
                     <div class="service-details">
-                        <p><i class="far fa-clock"></i> 40-50 min</p>
-                        <p class="price">IDR 75,000</p>
+                        <p><i class="far fa-clock"></i> <span data-en="40-50 min" data-id="40-50 mnt">40-50 min</span></p>
+                        <p class="price"><span class="old-price">IDR 75,000</span> <span class="discount-label">IDR 55,000</span></p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-user"></i>
                     </div>
-                    <h3>Beard Trim & Styling</h3>
-                    <p>Professional beard shaping, trimming, and conditioning for a polished look.</p>
+                    <h3 data-en="Beard Trim & Styling" data-id="Potong & Gaya Jenggot">Beard Trim & Styling</h3>
+                    <p data-en="Professional beard shaping, trimming, and conditioning for a polished look." data-id="Pembentukan jenggot profesional, pemangkasan, dan pengondisian untuk tampilan rapi.">Professional beard shaping, trimming, and conditioning for a polished look.</p>
                     <div class="service-details">
-                        <p><i class="far fa-clock"></i> 30-40 min</p>
-                        <p class="price">IDR 60,000</p>
+                        <p><i class="far fa-clock"></i> <span data-en="30-40 min" data-id="30-40 mnt">30-40 min</span></p>
+                        <p class="price"><span class="old-price">IDR 60,000</span> <span class="discount-label">IDR 45,000</span></p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-spa"></i>
                     </div>
-                    <h3>Shampoo & Conditioning</h3>
-                    <p>Deep cleansing and conditioning treatment with premium hair products.</p>
+                    <h3 data-en="Shampoo & Conditioning" data-id="Sampo & Pengondisi">Shampoo & Conditioning</h3>
+                    <p data-en="Deep cleansing and conditioning treatment with premium hair products." data-id="Perawatan pembersihan dan pengondisian mendalam dengan produk rambut premium.">Deep cleansing and conditioning treatment with premium hair products.</p>
                     <div class="service-details">
-                        <p><i class="far fa-clock"></i> 20-30 min</p>
-                        <p class="price">IDR 40,000</p>
+                        <p><i class="far fa-clock"></i> <span data-en="20-30 min" data-id="20-30 mnt">20-30 min</span></p>
+                        <p class="price"><span class="old-price">IDR 40,000</span> <span class="discount-label">IDR 30,000</span></p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-crown"></i>
                     </div>
-                    <h3>Grooming Packages</h3>
-                    <p>Complete grooming experience including haircut, shave, and facial treatment.</p>
+                    <h3 data-en="Grooming Packages" data-id="Paket Grooming">Grooming Packages</h3>
+                    <p data-en="Complete grooming experience including haircut, shave, and facial treatment." data-id="Pengalaman grooming lengkap termasuk potongan rambut, cukur, dan perawatan wajah.">Complete grooming experience including haircut, shave, and facial treatment.</p>
                     <div class="service-details">
-                        <p><i class="far fa-clock"></i> 90-120 min</p>
-                        <p class="price">IDR 180,000</p>
+                        <p><i class="far fa-clock"></i> <span data-en="90-120 min" data-id="90-120 mnt">90-120 min</span></p>
+                        <p class="price"><span class="old-price">IDR 180,000</span> <span class="discount-label">IDR 140,000</span></p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-child"></i>
                     </div>
-                    <h3>Kids Cut</h3>
-                    <p>Specialized haircuts for children in a friendly, comfortable environment.</p>
+                    <h3 data-en="Kids Cut" data-id="Potongan Anak-anak">Kids Cut</h3>
+                    <p data-en="Specialized haircuts for children in a friendly, comfortable environment." data-id="Potongan rambut khusus untuk anak-anak di lingkungan yang ramah dan nyaman.">Specialized haircuts for children in a friendly, comfortable environment.</p>
                     <div class="service-details">
-                        <p><i class="far fa-clock"></i> 30-45 min</p>
-                        <p class="price">IDR 65,000</p>
+                        <p><i class="far fa-clock"></i> <span data-en="30-45 min" data-id="30-45 mnt">30-45 min</span></p>
+                        <p class="price"><span class="old-price">IDR 65,000</span> <span class="discount-label">IDR 50,000</span></p>
                     </div>
                 </div>
             </div>
@@ -161,25 +170,25 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2 class="section-title">Our <span>Story</span></h2>
-                    <p class="about-intro">Mantra Barber & Grooming was founded with a simple philosophy: <strong>your confidence begins with a sharp cut.</strong></p>
-                    <p>We're a team of professional barbers with a deep passion for the art of grooming. Known for our exceptional hospitality, skilled techniques, and modern approach to traditional barbering.</p>
-                    <p>Our shop offers a friendly atmosphere where craftsmanship meets comfort. We focus on precision cuts and creating a grooming experience that leaves you looking and feeling your best.</p>
+                    <h2 class="section-title"><span data-en="Our " data-id="Cerita ">Our </span><span data-en="Story" data-id="Kami">Story</span></h2>
+                    <p class="about-intro" data-en="Mantra Barber & Grooming was founded with a simple philosophy: your confidence begins with a sharp cut." data-id="Mantra Barber & Grooming didirikan dengan filosofi sederhana: kepercayaan diri Anda dimulai dengan potongan yang tajam.">Mantra Barber & Grooming was founded with a simple philosophy: <strong data-en="your confidence begins with a sharp cut." data-id="kepercayaan diri Anda dimulai dengan potongan yang tajam.">your confidence begins with a sharp cut.</strong></p>
+                    <p data-en="We're a team of professional barbers with a deep passion for the art of grooming. Known for our exceptional hospitality, skilled techniques, and modern approach to traditional barbering." data-id="Kami adalah tim penata rambut profesional dengan passion mendalam terhadap seni grooming. Dikenal karena keramahan luar biasa, teknik terampil, dan pendekatan modern terhadap cukur tradisional.">We're a team of professional barbers with a deep passion for the art of grooming. Known for our exceptional hospitality, skilled techniques, and modern approach to traditional barbering.</p>
+                    <p data-en="Our shop offers a friendly atmosphere where craftsmanship meets comfort. We focus on precision cuts and creating a grooming experience that leaves you looking and feeling your best." data-id="Toko kami menawarkan suasana ramah di mana keahlian bertemu kenyamanan. Kami fokus pada potongan presisi dan menciptakan pengalaman grooming yang membuat Anda terlihat dan merasa terbaik.">Our shop offers a friendly atmosphere where craftsmanship meets comfort. We focus on precision cuts and creating a grooming experience that leaves you looking and feeling your best.</p>
                     <div class="about-features">
                         <div class="feature">
                             <i class="fas fa-award"></i>
-                            <h4>Professional Barbers</h4>
-                            <p>Highly trained with years of experience</p>
+                            <h4 data-en="Professional Barbers" data-id="Penata Rambut Profesional">Professional Barbers</h4>
+                            <p data-en="Highly trained with years of experience" data-id="Terlatih tinggi dengan pengalaman bertahun-tahun">Highly trained with years of experience</p>
                         </div>
                         <div class="feature">
                             <i class="fas fa-spa"></i>
-                            <h4>Premium Experience</h4>
-                            <p>Cold AC, mineral water, comfortable seating</p>
+                            <h4 data-en="Premium Experience" data-id="Pengalaman Premium">Premium Experience</h4>
+                            <p data-en="Cold AC, mineral water, comfortable seating" data-id="AC dingin, air mineral, tempat duduk nyaman">Cold AC, mineral water, comfortable seating</p>
                         </div>
                         <div class="feature">
                             <i class="fas fa-tools"></i>
-                            <h4>Modern Tools</h4>
-                            <p>Professional equipment & styling products</p>
+                            <h4 data-en="Modern Tools" data-id="Alat Modern">Modern Tools</h4>
+                            <p data-en="Professional equipment & styling products" data-id="Peralatan profesional & produk styling">Professional equipment & styling products</p>
                         </div>
                     </div>
                 </div>
@@ -194,7 +203,7 @@
     <section id="reviews" class="reviews">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Client <span>Reviews</span></h2>
+                <h2 class="section-title"><span data-en="Client " data-id="Ulasan ">Client </span><span data-en="Reviews" data-id="Klien">Reviews</span></h2>
                 <div class="rating-summary">
                     <div class="stars-large">
                         <i class="fas fa-star"></i>
@@ -203,7 +212,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p><strong>5.0</strong> out of 5 • Based on <strong>309+</strong> Google reviews</p>
+                    <p><strong>5.0</strong> <span data-en="out of 5 • Based on " data-id="dari 5 • Berdasarkan ">out of 5 • Based on </span><strong>309+</strong> <span data-en="Google reviews" data-id="ulasan Google">Google reviews</span></p>
                 </div>
             </div>
             <div class="reviews-grid">
@@ -216,9 +225,9 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <h4>"Excellent hospitality!"</h4>
+                        <h4 data-en="\"Excellent hospitality!\"" data-id="\"Keramahan luar biasa!\"">\"Excellent hospitality!\"</h4>
                     </div>
-                    <p class="review-text">The barbers are highly skilled and the shop has a clean, aesthetic vibe. They offer cold water and make you feel welcome. Professional modern tools and good pricing.</p>
+                    <p class="review-text" data-en="The barbers are highly skilled and the shop has a clean, aesthetic vibe. They offer cold water and make you feel welcome. Professional modern tools and good pricing." data-id="Penata rambut sangat terampil dan toko memiliki vibe estetika yang bersih. Mereka menawarkan air dingin dan membuat Anda merasa diterima. Alat modern profesional dan harga baik.">The barbers are highly skilled and the shop has a clean, aesthetic vibe. They offer cold water and make you feel welcome. Professional modern tools and good pricing.</p>
                     <div class="review-author">
                         <p><strong>Aziz Hammadi</strong></p>
                     </div>
@@ -232,9 +241,9 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <h4>"Best fade in town"</h4>
+                        <h4 data-en="\"Best fade in town\"" data-id="\"Fade terbaik di kota\"">\"Best fade in town\"</h4>
                     </div>
-                    <p class="review-text">Perfect fade cut every time. Comfortable atmosphere with cold AC and friendly discussions. These guys know what they're doing with a razor!</p>
+                    <p class="review-text" data-en="Perfect fade cut every time. Comfortable atmosphere with cold AC and friendly discussions. These guys know what they're doing with a razor!" data-id="Potongan fade sempurna setiap waktu. Suasana nyaman dengan AC dingin dan diskusi ramah. Mereka tahu apa yang mereka lakukan dengan pisau!">Perfect fade cut every time. Comfortable atmosphere with cold AC and friendly discussions. These guys know what they're doing with a razor!</p>
                     <div class="review-author">
                         <p><strong>Rizal Pratama</strong></p>
                     </div>
@@ -248,9 +257,9 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <h4>"Nice and good!"</h4>
+                        <h4 data-en="\"Nice and good!\"" data-id="\"Bagus dan menakjubkan!\"">\"Nice and good!\"</h4>
                     </div>
-                    <p class="review-text">Always leave looking sharp. They pay attention to detail and use quality products. The shop is modern and clean with a great masculine vibe.</p>
+                    <p class="review-text" data-en="Always leave looking sharp. They pay attention to detail and use quality products. The shop is modern and clean with a great masculine vibe." data-id="Selalu pergi dengan tampilan tajam. Mereka memperhatikan detail dan menggunakan produk berkualitas. Toko ini modern, bersih, dan memiliki aura maskulin yang bagus.">Always leave looking sharp. They pay attention to detail and use quality products. The shop is modern and clean with a great masculine vibe.</p>
                     <div class="review-author">
                         <p><strong>Andi Wijaya</strong></p>
                     </div>
@@ -263,28 +272,28 @@
     <section id="gallery" class="gallery">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our <span>Gallery</span></h2>
-                <p class="section-subtitle">A glimpse of our work and space</p>
+                <h2 class="section-title"><span data-en="Our " data-id="Galeri ">Our </span><span data-en="Gallery" data-id="Kami">Gallery</span></h2>
+                <p class="section-subtitle" data-en="A glimpse of our work and space" data-id="Sekilas tentang pekerjaan dan ruang kami">A glimpse of our work and space</p>
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');">
                     <div class="gallery-overlay">
-                        <p>Haircut Styles</p>
+                        <p data-en="Haircut Styles" data-id="Gaya Potong Rambut">Haircut Styles</p>
                     </div>
                 </div>
                 <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');">
                     <div class="gallery-overlay">
-                        <p>Barber Workspace</p>
+                        <p data-en="Barber Workspace" data-id="Ruang Kerja Penata Rambut">Barber Workspace</p>
                     </div>
                 </div>
                 <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1567894340315-735d7c361db0?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80');">
                     <div class="gallery-overlay">
-                        <p>Tools & Equipment</p>
+                        <p data-en="Tools & Equipment" data-id="Alat & Perlengkapan">Tools & Equipment</p>
                     </div>
                 </div>
                 <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-1.2.1&auto=format&fit=crop&w-600&q=80');">
                     <div class="gallery-overlay">
-                        <p>Before/After Shots</p>
+                        <p data-en="Before/After Shots" data-id="Foto Sebelum/Sesudah">Before/After Shots</p>
                     </div>
                 </div>
             </div>
@@ -296,59 +305,59 @@
         <div class="container">
             <div class="contact-content">
                 <div class="contact-info">
-                    <h2 class="section-title">Contact & <span>Booking</span></h2>
+                    <h2 class="section-title"><span data-en="Contact & " data-id="Kontak & ">Contact & </span><span data-en="Booking" data-id="Pemesanan">Booking</span></h2>
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h4>Address</h4>
+                            <h4 data-en="Address" data-id="Alamat">Address</h4>
                             <p>Jl. Zamrud Raya No.5A, Jakarta, Indonesia</p>
                         </div>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-clock"></i>
                         <div>
-                            <h4>Opening Hours</h4>
-                            <p>Monday - Friday: 9:00 AM - 8:00 PM</p>
-                            <p>Saturday - Sunday: 10:00 AM - 9:00 PM</p>
+                            <h4 data-en="Opening Hours" data-id="Jam Operasional">Opening Hours</h4>
+                            <p data-en="Monday - Friday: 9:00 AM - 8:00 PM" data-id="Senin - Jumat: 9:00 AM - 8:00 PM">Monday - Friday: 9:00 AM - 8:00 PM</p>
+                            <p data-en="Saturday - Sunday: 10:00 AM - 9:00 PM" data-id="Sabtu - Minggu: 10:00 AM - 9:00 PM">Saturday - Sunday: 10:00 AM - 9:00 PM</p>
                         </div>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-phone"></i>
                         <div>
-                            <h4>Phone</h4>
+                            <h4 data-en="Phone" data-id="Telepon">Phone</h4>
                             <p>+62 812 3456 7890</p>
                         </div>
                     </div>
                     <div class="map-placeholder">
                         <div class="map-frame">
                             <i class="fas fa-map"></i>
-                            <p>Google Maps Embed</p>
+                            <p data-en="Google Maps Embed" data-id="Sematkan Google Maps">Google Maps Embed</p>
                             <small>Jl. Zamrud Raya No.5A</small>
                         </div>
                     </div>
                 </div>
                 <div class="booking-form" id="booking">
-                    <h3>Book Your Appointment</h3>
+                    <h3 data-en="Book Your Appointment" data-id="Pesan Janji Temu Anda">Book Your Appointment</h3>
                     <form id="appointmentForm">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" placeholder="Your Name" data-en-placeholder="Your Name" data-id-placeholder="Nama Anda" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Phone Number" required>
+                            <input type="tel" placeholder="Phone Number" data-en-placeholder="Phone Number" data-id-placeholder="Nomor Telepon" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Email Address">
+                            <input type="email" placeholder="Email Address" data-en-placeholder="Email Address" data-id-placeholder="Alamat Email">
                         </div>
                         <div class="form-group">
                             <select required>
-                                <option value="" disabled selected>Select Service</option>
-                                <option value="custom-haircut">Custom Haircut</option>
-                                <option value="fade-cut">Fade Cut</option>
-                                <option value="razor-shave">Straight Razor Shave</option>
-                                <option value="beard-trim">Beard Trim & Styling</option>
-                                <option value="shampoo">Shampoo & Conditioning</option>
-                                <option value="grooming-package">Grooming Package</option>
-                                <option value="kids-cut">Kids Cut</option>
+                                <option value="" disabled selected data-en="Select Service" data-id="Pilih Layanan">Select Service</option>
+                                <option value="custom-haircut" data-en="Custom Haircut" data-id="Potong Rambut Khusus">Custom Haircut</option>
+                                <option value="fade-cut" data-en="Fade Cut" data-id="Potongan Fade">Fade Cut</option>
+                                <option value="razor-shave" data-en="Straight Razor Shave" data-id="Cukur Pisau Lurus">Straight Razor Shave</option>
+                                <option value="beard-trim" data-en="Beard Trim & Styling" data-id="Potong & Gaya Jenggot">Beard Trim & Styling</option>
+                                <option value="shampoo" data-en="Shampoo & Conditioning" data-id="Sampo & Pengondisi">Shampoo & Conditioning</option>
+                                <option value="grooming-package" data-en="Grooming Package" data-id="Paket Grooming">Grooming Package</option>
+                                <option value="kids-cut" data-en="Kids Cut" data-id="Potongan Anak-anak">Kids Cut</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -356,7 +365,7 @@
                         </div>
                         <div class="form-group">
                             <select required>
-                                <option value="" disabled selected>Preferred Time</option>
+                                <option value="" disabled selected data-en="Preferred Time" data-id="Waktu Pilihan">Preferred Time</option>
                                 <option value="9:00">9:00 AM</option>
                                 <option value="10:00">10:00 AM</option>
                                 <option value="11:00">11:00 AM</option>
@@ -369,19 +378,24 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Additional notes (optional)" rows="3"></textarea>
+                            <textarea placeholder="Additional notes (optional)" data-en-placeholder="Additional notes (optional)" data-id-placeholder="Catatan tambahan (opsional)" rows="3"></textarea>
                         </div>
-                        <button type="submit" class="btn-primary">Book Appointment</button>
+                        <button type="submit" class="btn-primary" data-en="Book Appointment" data-id="Pesan Janji">Book Appointment</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- In the footer-bottom section, update this line: -->
-<div class="footer-bottom">
-    <p>&copy; <span class="current-year">2023</span> Mantra Barber & Grooming. All rights reserved. | Crafted with precision.</p>
-</div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2023</span> <span data-en="Mantra Barber & Grooming. All rights reserved. | Crafted with precision." data-id="Mantra Barber & Grooming. Hak cipta dilindungi. | Dibuat dengan presisi.">Mantra Barber & Grooming. All rights reserved. | Crafted with precision.</span></p>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
