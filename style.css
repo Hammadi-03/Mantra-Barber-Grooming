@@ -362,7 +362,11 @@ section h2::after {
 }
 
 #services {
-    background-color: #fafafa;
+    border-top-left-radius: 59px;
+    border-top-right-radius: 59px;
+    background-color: #ece9c9;
+    overflow: hidden;
+    margin-top: 50px;
 }
 
 [data-theme="dark"] #services {
